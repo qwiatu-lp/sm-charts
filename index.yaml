@@ -1,0 +1,72 @@
+apiVersion: v1
+entries:
+  ezd-backend:
+  - annotations:
+      catalog.cattle.io/display-name: LP Backend for EZD RP
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/release-name: ezd-backend
+    apiVersion: v2
+    appVersion: 1.2025.21.7
+    created: "2025-05-15T12:05:33.781511259+02:00"
+    description: Services necessary to run EZD RP app
+    digest: 9eb53efbda1d697a6c72a197f9a3204da6be2c1808a17cef0e4116c6f47ebefb
+    home: https://linuxpolska.com
+    icon: https://linuxpolska.com/logo/LinuxPolska-icon.png
+    keywords:
+    - config
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: biuro@linuxpolska.com
+      name: Linux Polska
+    name: ezd-backend
+    sources:
+    - https://github.com/linuxpolska/ezd-rp.git
+    type: application
+    urls:
+    - ezd-backend-1.7.0.tgz
+    version: 1.7.0
+  ezd-crd:
+  - annotations:
+      catalog.cattle.io/display-name: CRDs for LP Backend
+      catalog.cattle.io/namespace: default
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/release-name: ezd-crd
+    apiVersion: v2
+    appVersion: 1.2025.21.7
+    created: "2025-05-15T12:05:33.797272532+02:00"
+    dependencies:
+    - alias: rabbitmq-operator
+      condition: global.rabbitmq.deploy
+      name: rabbitmq-cluster-operator
+      repository: https://charts.bitnami.com/bitnami
+      version: 4.4.11
+    - condition: global.postgresql.deploy
+      name: cloudnative-pg
+      repository: https://cloudnative-pg.github.io/charts
+      version: 0.23.2
+    - condition: global.redis.deploy
+      name: redis-operator
+      repository: https://ot-container-kit.github.io/helm-charts
+      version: 0.20.1
+    description: Set of operators and CRDs for LP Backend
+    digest: 2736cb16f89ab0981fe6cf2fe665ec052932b3c618fbb6aa89ea7fb2cb39521b
+    home: https://linuxpolska.com
+    icon: https://linuxpolska.com/logo/LinuxPolska-icon.png
+    keywords:
+    - ezd
+    - ezdrp
+    - ezd-rp
+    - backend
+    - databases
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: biuro@linuxpolska.com
+      name: Linux Polska
+    name: ezd-crd
+    sources:
+    - https://github.com/linuxpolska/ezd-rp.git
+    type: application
+    urls:
+    - ezd-crd-1.7.0.tgz
+    version: 1.7.0
+generated: "2025-05-15T12:05:33.779574609+02:00"
