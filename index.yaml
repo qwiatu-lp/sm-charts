@@ -1,0 +1,39 @@
+apiVersion: v1
+entries:
+  sonarqube:
+  - annotations:
+      catalog.cattle.io/display-name: Sonarqube (1/1) - App
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux
+      catalog.cattle.io/release-name: sonarqube
+    apiVersion: v2
+    appVersion: 2025.1.1
+    created: "2025-05-21T13:33:35.714874182+02:00"
+    dependencies:
+    - name: common
+      repository: https://charts.sourcemation.com/
+      version: 0.1.x
+    - condition: global.sonarqubeApp.enabled
+      name: sonarqube
+      repository: https://SonarSource.github.io/helm-chart-sonarqube/
+      version: 2025.1.1
+    description: A static code analysis tool that detects bugs, vulnerabilities, and
+      code quality issues. Install many times on kubernetes. Code analysis.
+    digest: 9926b67734b6aac3210b1525d777ef91b2b526d137a9214b1b61ef5b571fa4c2
+    home: https://linuxpolska.com
+    icon: https://linuxpolska.com/logo/LinuxPolska-icon.png
+    keywords:
+    - sonarqube
+    - static-analysis
+    - code analysis
+    maintainers:
+    - email: marek.janosz@linuxpolska.com
+      name: jmmaro
+    name: sonarqube
+    sources:
+    - https://github.com/SourceMation/charts.git
+    type: application
+    urls:
+    - sonarqube-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-05-21T13:33:35.704196737+02:00"
