@@ -9,7 +9,7 @@ entries:
       catalog.cattle.io/release-name: cnpg
     apiVersion: v2
     appVersion: 0.23.1
-    created: "2025-05-21T14:44:48.613922514+02:00"
+    created: "2025-05-21T20:33:59.784294828+02:00"
     dependencies:
     - name: common
       repository: https://charts.sourcemation.com/
@@ -20,7 +20,7 @@ entries:
       version: 0.23.1
     description: CloudNativePG is operator designed to manage PostgreSQL workloads.
       Install only once on kubernetes. Databases.
-    digest: 5dae7d626520e7161e4313f5b0c9119a05d982e9a8d6e3059a865430cae77709
+    digest: 59c6972013feea5a8bfd1c168f77126be4061919e6b9cc3f73ea3183db65e13f
     home: https://linuxpolska.com
     icon: https://linuxpolska.com/logo/LinuxPolska-icon.png
     keywords:
@@ -39,91 +39,4 @@ entries:
     urls:
     - cnpg-operator-0.2.2.tgz
     version: 0.2.2
-  istio-operator:
-  - annotations:
-      catalog.cattle.io/display-name: Istio (1/1) - Operator
-      catalog.cattle.io/namespace: istio-system
-      catalog.cattle.io/os: linux
-      catalog.cattle.io/permits-os: linux
-      catalog.cattle.io/release-name: istio-operator
-    apiVersion: v2
-    appVersion: 1.26.0
-    created: "2025-05-21T14:44:48.619417694+02:00"
-    dependencies:
-    - name: common
-      repository: https://charts.sourcemation.com/
-      version: 0.1.x
-    - condition: global.istioOperatorCrd.enabled
-      name: base
-      repository: https://istio-release.storage.googleapis.com/charts
-      version: 1.26.0
-    - condition: global.istioOperatorCrd.enabled
-      name: istiod
-      repository: https://istio-release.storage.googleapis.com/charts
-      version: 1.26.0
-    - condition: global.istioOperatorCrd.enabled
-      name: cni
-      repository: https://istio-release.storage.googleapis.com/charts
-      version: 1.26.0
-    - condition: global.istioOperatorCrd.enabled
-      name: ztunnel
-      repository: https://istio-release.storage.googleapis.com/charts
-      version: 1.26.0
-    description: Istio is an open source service mesh that layers transparently onto
-      existing distributed applications. Install only once on kubernetes. Security
-      & Monitoring.
-    digest: c14724c60aa56679660a66c7d5881ecb54e9acb8af180d7b4720c592286a2bad
-    home: https://linuxpolska.com
-    icon: https://linuxpolska.com/logo/LinuxPolska-icon.png
-    keywords:
-    - security
-    - monitoring
-    - istio
-    kubeVersion: '>=1.26.0-0 <1.31.0-0'
-    maintainers:
-    - email: radoslaw.kolba@linuxpolska.com
-      name: radkolba
-    name: istio-operator
-    sources:
-    - https://github.com/SourceMation/charts.git
-    type: application
-    urls:
-    - istio-operator-0.2.0.tgz
-    version: 0.2.0
-  sonarqube:
-  - annotations:
-      catalog.cattle.io/display-name: Sonarqube (1/1) - App
-      catalog.cattle.io/os: linux
-      catalog.cattle.io/permits-os: linux
-      catalog.cattle.io/release-name: sonarqube
-    apiVersion: v2
-    appVersion: 2025.1.1
-    created: "2025-05-21T14:44:48.630036451+02:00"
-    dependencies:
-    - name: common
-      repository: https://charts.sourcemation.com/
-      version: 0.1.x
-    - condition: global.sonarqubeApp.enabled
-      name: sonarqube
-      repository: https://SonarSource.github.io/helm-chart-sonarqube/
-      version: 2025.1.1
-    description: A static code analysis tool that detects bugs, vulnerabilities, and
-      code quality issues. Install many times on kubernetes. Code analysis.
-    digest: 9926b67734b6aac3210b1525d777ef91b2b526d137a9214b1b61ef5b571fa4c2
-    home: https://linuxpolska.com
-    icon: https://linuxpolska.com/logo/LinuxPolska-icon.png
-    keywords:
-    - sonarqube
-    - static-analysis
-    - code analysis
-    maintainers:
-    - email: marek.janosz@linuxpolska.com
-      name: jmmaro
-    name: sonarqube
-    sources:
-    - https://github.com/SourceMation/charts.git
-    type: application
-    urls:
-    - sonarqube-0.1.0.tgz
-    version: 0.1.0
-generated: "2025-05-21T14:44:48.606678045+02:00"
+generated: "2025-05-21T20:33:59.777473375+02:00"
