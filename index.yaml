@@ -9,7 +9,7 @@ entries:
       catalog.cattle.io/release-name: cnpg
     apiVersion: v2
     appVersion: 0.23.1
-    created: "2025-05-21T20:33:59.784294828+02:00"
+    created: "2025-05-22T11:50:52.28397726+02:00"
     dependencies:
     - name: common
       repository: https://charts.sourcemation.com/
@@ -39,4 +39,55 @@ entries:
     urls:
     - cnpg-operator-0.2.2.tgz
     version: 0.2.2
-generated: "2025-05-21T20:33:59.777473375+02:00"
+  istio-operator:
+  - annotations:
+      catalog.cattle.io/display-name: Istio (1/1) - Operator
+      catalog.cattle.io/namespace: istio-system
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux
+      catalog.cattle.io/release-name: istio-operator
+    apiVersion: v2
+    appVersion: 1.26.0
+    created: "2025-05-22T11:50:52.289337303+02:00"
+    dependencies:
+    - name: common
+      repository: https://charts.sourcemation.com/
+      version: 0.1.x
+    - condition: global.istioOperatorCrd.enabled
+      name: base
+      repository: https://istio-release.storage.googleapis.com/charts
+      version: 1.26.0
+    - condition: global.istioOperatorCrd.enabled
+      name: istiod
+      repository: https://istio-release.storage.googleapis.com/charts
+      version: 1.26.0
+    - condition: global.istioOperatorCrd.enabled
+      name: cni
+      repository: https://istio-release.storage.googleapis.com/charts
+      version: 1.26.0
+    - condition: global.istioOperatorCrd.enabled
+      name: ztunnel
+      repository: https://istio-release.storage.googleapis.com/charts
+      version: 1.26.0
+    description: Istio is an open source service mesh that layers transparently onto
+      existing distributed applications. Install only once on kubernetes. Security
+      & Monitoring.
+    digest: 5409866b269a01811d9d47fb4ec07a02a9649189445f7e80a93e17126bbf8822
+    home: https://linuxpolska.com
+    icon: https://linuxpolska.com/logo/LinuxPolska-icon.png
+    keywords:
+    - security
+    - monitoring
+    - istio
+    kubeVersion: '>=1.26.0-0 <1.31.0-0'
+    maintainers:
+    - email: radoslaw.kolba@linuxpolska.com
+      name: radkolba
+    name: istio-operator
+    sources:
+    - https://github.com/SourceMation/charts.git
+    type: application
+    urls:
+    - istio-operator-0.2.0.tgz
+    version: 0.2.0
+generated: "2025-05-22T11:50:52.277564389+02:00"
