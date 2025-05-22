@@ -9,7 +9,7 @@ entries:
       catalog.cattle.io/release-name: cnpg
     apiVersion: v2
     appVersion: 0.23.1
-    created: "2025-05-22T11:50:52.28397726+02:00"
+    created: "2025-05-22T12:06:21.674307581+02:00"
     dependencies:
     - name: common
       repository: https://charts.sourcemation.com/
@@ -48,7 +48,7 @@ entries:
       catalog.cattle.io/release-name: istio-operator
     apiVersion: v2
     appVersion: 1.26.0
-    created: "2025-05-22T11:50:52.289337303+02:00"
+    created: "2025-05-22T12:06:21.679612411+02:00"
     dependencies:
     - name: common
       repository: https://charts.sourcemation.com/
@@ -72,7 +72,7 @@ entries:
     description: Istio is an open source service mesh that layers transparently onto
       existing distributed applications. Install only once on kubernetes. Security
       & Monitoring.
-    digest: 5409866b269a01811d9d47fb4ec07a02a9649189445f7e80a93e17126bbf8822
+    digest: bb6535947458776d980edd3b1f73f4a2d912b9fe69e901cb9d3126040db801c8
     home: https://linuxpolska.com
     icon: https://linuxpolska.com/logo/LinuxPolska-icon.png
     keywords:
@@ -90,4 +90,4 @@ entries:
     urls:
     - istio-operator-0.2.0.tgz
     version: 0.2.0
-generated: "2025-05-22T11:50:52.277564389+02:00"
+generated: "2025-05-22T12:06:21.66786932+02:00"
